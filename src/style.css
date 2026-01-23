@@ -13,56 +13,40 @@ h1,
 h2 {
     text-align: center;
 }
-#basis,
-#basis2 {
+#basis {
     position: relative;
     margin: auto;
     width: 1000px;
 }
-#basis {
-    text-align: center;
-}
-.im,
-.imx {
-    border: 1px solid #000;
-    width: 300px;
-}
-.imx {
-    margin: 10px;
-    height: 150px;
-}
 .im {
-    height: 150px;
-    cursor: pointer;
-    opacity: 0.2;
-}
-#bas,
-#view {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-}
-#bas {
-    z-index: 1;
-    background-color: #fff;
-    opacity: 0.95;
-}
-#view {
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#pict {
+    width: 300px;
+    height: 200px;
     border: 1px solid #000;
     cursor: pointer;
+    z-index: 1;
 }
-
-#sel {
-    width: 200px;
-    font-size: 20px;
-    border: 1px solid black;
+#i1 {
+    left: 10px;
+    top: 10px;
+}
+#i2 {
+    left: 322px;
+    top: 10px;
+}
+#i3 {
+    left: 634px;
+    top: 10px;
+}
+#i4 {
+    left: 10px;
+    top: 220px;
+}
+#i5 {
+    left: 322px;
+    top: 220px;
+}
+#i6 {
+    left: 634px;
+    top: 220px;
 }
