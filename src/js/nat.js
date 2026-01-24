@@ -77,50 +77,100 @@
 // Конец Выбор фото из списка
 
 //Увеличение и растворение
-let y = 1;
-let w = 0;
-let h = 0;
-addEventListener('click', (ev) => {
-    let e = ev.target;
-    if (e.tagName == 'IMG') {
-        let t = document.getElementById(e.id).style;
-        if (y == 1) {
-            let d = document.getElementById(e.id);
-            w = d.offsetLeft;
-            console.log(w);
-            h = d.offsetTop;
-            console.log(h);
-            y = 2;
-            for (let i = 1; i < 7; i++) {
-                let b = 'i' + i;
-                if (e.id != b) {
-                    let p = document.getElementById(b).style;
-                    p.transition = 'opacity 1s';
-                    p.opacity = 0;
-                }
-            }
-            t.zIndex = 2;
-            t.transition = 'width 1s, left 1s, top 1s, transform 1s';
-            t.transform = 'rotate(360deg)';
-            t.width = 600 + 'px';
-            t.left = 200 + 'px';
-            t.top = 100 + 'px';
-        } else {
-            y = 1;
-            for (let i = 1; i < 7; i++) {
-                let b = 'i' + i;
+// let y = 1;
+// let w = 0;
+// let h = 0;
+// addEventListener('click', (ev) => {
+//     let e = ev.target;
+//     if (e.tagName == 'IMG') {
+//         let t = document.getElementById(e.id).style;
+//         if (y == 1) {
+//             let d = document.getElementById(e.id);
+//             w = d.offsetLeft;
+//             console.log(w);
+//             h = d.offsetTop;
+//             console.log(h);
+//             y = 2;
+//             for (let i = 1; i < 7; i++) {
+//                 let b = 'i' + i;
+//                 if (e.id != b) {
+//                     let p = document.getElementById(b).style;
+//                     p.transition = 'opacity 1s';
+//                     p.opacity = 0;
+//                 }
+//             }
+//             t.zIndex = 2;
+//             t.transition = 'width 1s, left 1s, top 1s, transform 1s';
+//             t.transform = 'rotate(360deg)';
+//             t.width = 600 + 'px';
+//             t.left = 200 + 'px';
+//             t.top = 100 + 'px';
+//         } else {
+//             y = 1;
+//             for (let i = 1; i < 7; i++) {
+//                 let b = 'i' + i;
 
-                let p = document.getElementById(b).style;
-                p.transition = 'opacity 2s';
-                p.opacity = 1;
+//                 let p = document.getElementById(b).style;
+//                 p.transition = 'opacity 2s';
+//                 p.opacity = 1;
+//             }
+//             t.transition = 'width 1s, left 1s, top 1s, transform 1s';
+//             t.transform = 'rotate(0deg)';
+//             t.width = 300 + 'px';
+//             t.left = w + 'px';
+//             t.top = h + 'px';
+//             t.zIndex = 1;
+//         }
+//     }
+// });
+//Конец увеличения и растворения
+
+//Список альбомов
+addEventListener('load', function () {
+    let arr = [
+        [1, 2, 14, 20, 30, 70],
+        [18, 22, 29, 35, 60, 74],
+        [3, 6, 13, 27, 88, 89],
+    ];
+    document.getElementById('sel').addEventListener('change', () => {
+        document.getElementById('ins').innerHTML = '';
+        let a = document.getElementById('sel').value;
+
+        console.log(a);
+        if (a != 99) {
+            let summ = '';
+            for (let i = 0; i < arr[a].length; i++) {
+                summ =
+                    summ +
+                    '<img src="/images/albom/' +
+                    arr[a][i] +
+                    '.jpg" class="im" alt="Фото" >';
+                document.getElementById('ins').innerHTML = summ;
             }
-            t.transition = 'width 1s, left 1s, top 1s, transform 1s';
-            t.transform = 'rotate(0deg)';
-            t.width = 300 + 'px';
-            t.left = w + 'px';
-            t.top = h + 'px';
-            t.zIndex = 1;
         }
+    });
+});
+addEventListener('scroll', del);
+let bas = document.getElementById('bas').style;
+let view = document.getElementById('view');
+let pict = document.getElementById('pict');
+document.getElementById('basis').addEventListener('click', (ev) => {
+    let e = ev.target;
+    if (e.tagName === 'IMG') {
+        let sc = window.pageYOffset;
+        console.log(sc);
+        bas.top = sc + 'px';
+        view.style.top = sc + 'px';
+        pict.src = e.src;
+        view.style.visibility = 'visible';
+        bas.visibility = 'visible';
     }
 });
-//Конец увеличения и растворения
+view.addEventListener('click', del);
+function del() {
+    view.style.visibility = 'hidden';
+
+    bas.visibility = 'hidden';
+    pict.src = '/images/albom/net.jpg';
+}
+//Конец списка альбомов
