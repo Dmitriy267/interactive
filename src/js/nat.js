@@ -126,51 +126,80 @@
 //Конец увеличения и растворения
 
 //Список альбомов
-addEventListener('load', function () {
-    let arr = [
-        [1, 2, 14, 20, 30, 70],
-        [18, 22, 29, 35, 60, 74],
-        [3, 6, 13, 27, 88, 89],
-    ];
-    document.getElementById('sel').addEventListener('change', () => {
-        document.getElementById('ins').innerHTML = '';
-        let a = document.getElementById('sel').value;
+// addEventListener('load', function () {
+//     let arr = [
+//         [1, 2, 14, 20, 30, 70],
+//         [18, 22, 29, 35, 60, 74],
+//         [3, 6, 13, 27, 88, 89],
+//     ];
+//     document.getElementById('sel').addEventListener('change', () => {
+//         document.getElementById('ins').innerHTML = '';
+//         let a = document.getElementById('sel').value;
 
-        console.log(a);
-        if (a != 99) {
-            let summ = '';
-            for (let i = 0; i < arr[a].length; i++) {
-                summ =
-                    summ +
-                    '<img src="/images/albom/' +
-                    arr[a][i] +
-                    '.jpg" class="im" alt="Фото" >';
-                document.getElementById('ins').innerHTML = summ;
-            }
+//         if (a != 99) {
+//             let summ = '';
+//             for (let i = 0; i < arr[a].length; i++) {
+//                 summ =
+//                     summ +
+//                     '<img src="/images/albom/' +
+//                     arr[a][i] +
+//                     '.jpg" class="im" alt="Фото" >';
+//                 document.getElementById('ins').innerHTML = summ;
+//             }
+//         }
+//     });
+// });
+// addEventListener('scroll', del);
+// let bas = document.getElementById('bas').style;
+// let view = document.getElementById('view');
+// let pict = document.getElementById('pict');
+// document.getElementById('basis').addEventListener('click', (ev) => {
+//     let e = ev.target;
+//     if (e.tagName === 'IMG') {
+//         let sc = window.pageYOffset;
+
+//         bas.top = sc + 'px';
+//         view.style.top = sc + 'px';
+//         pict.src = e.src;
+//         view.style.visibility = 'visible';
+//         bas.visibility = 'visible';
+//     }
+// });
+// view.addEventListener('click', del);
+// function del() {
+//     view.style.visibility = 'hidden';
+
+//     bas.visibility = 'hidden';
+//     pict.src = '/images/albom/net.jpg';
+// }
+//Конец списка альбомов
+
+// Слои вместо фото
+addEventListener('load', function () {
+    document.getElementById('basis').addEventListener('click', look);
+    document.getElementById('view').addEventListener('click', del);
+    addEventListener('scroll', del);
+
+    let bas = document.getElementById('bas').style;
+    let view = document.getElementById('view').style;
+    let pict = document.getElementById('pict');
+
+    function look(ev) {
+        let ni = ev.target.id;
+
+        if (ni.indexOf('fr') == 0) {
+            let sc = window.pageYOffset;
+            bas.top = sc + 'px';
+            view.top = sc + 'px';
+            pict.src = '/images/berries/' + ni + '.jpg';
+            view.visibility = 'visible';
+            bas.visibility = 'visible';
         }
-    });
-});
-addEventListener('scroll', del);
-let bas = document.getElementById('bas').style;
-let view = document.getElementById('view');
-let pict = document.getElementById('pict');
-document.getElementById('basis').addEventListener('click', (ev) => {
-    let e = ev.target;
-    if (e.tagName === 'IMG') {
-        let sc = window.pageYOffset;
-        console.log(sc);
-        bas.top = sc + 'px';
-        view.style.top = sc + 'px';
-        pict.src = e.src;
-        view.style.visibility = 'visible';
-        bas.visibility = 'visible';
+    }
+    function del() {
+        view.visibility = 'hidden';
+        bas.visibility = 'hidden';
+        pict.src = '/images/berries/net.jpg';
     }
 });
-view.addEventListener('click', del);
-function del() {
-    view.style.visibility = 'hidden';
-
-    bas.visibility = 'hidden';
-    pict.src = '/images/albom/net.jpg';
-}
-//Конец списка альбомов
+//Конец Слои вместо фото
