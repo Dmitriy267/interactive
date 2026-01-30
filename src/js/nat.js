@@ -175,31 +175,75 @@
 //Конец списка альбомов
 
 // Слои вместо фото
-addEventListener('load', function () {
-    document.getElementById('basis').addEventListener('click', look);
-    document.getElementById('view').addEventListener('click', del);
-    addEventListener('scroll', del);
+// addEventListener('load', function () {
+//     document.getElementById('basis').addEventListener('click', look);
+//     document.getElementById('view').addEventListener('click', del);
+//     addEventListener('scroll', del);
 
-    let bas = document.getElementById('bas').style;
-    let view = document.getElementById('view').style;
-    let pict = document.getElementById('pict');
+//     let bas = document.getElementById('bas').style;
+//     let view = document.getElementById('view').style;
+//     let pict = document.getElementById('pict');
 
-    function look(ev) {
-        let ni = ev.target.id;
+//     function look(ev) {
+//         let ni = ev.target.id;
 
-        if (ni.indexOf('fr') == 0) {
-            let sc = window.pageYOffset;
-            bas.top = sc + 'px';
-            view.top = sc + 'px';
-            pict.src = '/images/berries/' + ni + '.jpg';
-            view.visibility = 'visible';
-            bas.visibility = 'visible';
-        }
-    }
-    function del() {
-        view.visibility = 'hidden';
-        bas.visibility = 'hidden';
-        pict.src = '/images/berries/net.jpg';
-    }
-});
+//         if (ni.indexOf('fr') == 0) {
+//             let sc = window.pageYOffset;
+//             bas.top = sc + 'px';
+//             view.top = sc + 'px';
+//             pict.src = '/images/berries/' + ni + '.jpg';
+//             view.visibility = 'visible';
+//             bas.visibility = 'visible';
+//         }
+//     }
+//     function del() {
+//         view.visibility = 'hidden';
+//         bas.visibility = 'hidden';
+//         pict.src = '/images/berries/net.jpg';
+//     }
+// });
 //Конец Слои вместо фото
+
+//Галереи
+//Смещаем фото вверх
+addEventListener('load', function () {
+    document.getElementById('bu').addEventListener('click', but);
+});
+let k = 10;
+let s = 0;
+function but() {
+    s = s + 1;
+    k = 10;
+    if (s < 6) {
+        mov();
+    }
+    if (s == 6) {
+        mov();
+        setTimeout(() => {
+            ((k = 10), (s = 0));
+        }, 1000);
+        let h = document.getElementById('i1').style;
+        h.opacity = 0;
+        setTimeout(() => {
+            h.top = '10px';
+            h.transition = 'opacity 1s';
+            h.opacity = 1;
+            setTimeout(() => {
+                if (h.opacity == 1) {
+                    for (let a = 2; a < 7; a++) {
+                        document.getElementById('i' + a).style.top = '10px';
+                    }
+                }
+            }, 1000);
+        }, 1000);
+    }
+}
+function mov() {
+    if (k >= -700) {
+        document.getElementById('i' + s).style.top = k + 'px';
+        k = k - 10;
+        setTimeout(mov, 10);
+    }
+}
+//Конец Смещаем фото вверх
+//Конец Галереи

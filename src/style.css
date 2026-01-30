@@ -10,7 +10,8 @@
     -moz-box-sizing: border-box;
 }
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
 }
 /* #basis {
@@ -95,7 +96,7 @@ h2 {
 } */
 
 /*Слои вместо фото*/
-#basis {
+/* #basis {
     position: relative;
     margin: auto;
     width: 1000px;
@@ -163,6 +164,51 @@ h2 {
     left: 743px;
     width: 200px;
     height: 150px;
-}
+} */
 
 /*Конец Слои вместо фото*/
+
+/*Галереи*/
+/*Смещаем фото вверх*/
+#basis {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+}
+.im {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    border: 1px solid #000;
+}
+#i1 {
+    z-index: 7;
+}
+#i2 {
+    z-index: 6;
+}
+#i3 {
+    z-index: 5;
+}
+#i4 {
+    z-index: 4;
+}
+#i5 {
+    z-index: 3;
+}
+#i6 {
+    z-index: 2;
+}
+#bu {
+    position: absolute;
+    top: 450px;
+    left: 200px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #000000;
+    box-shadow: #333333 5px 5px 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*Конец фото вверх*/
+/*Конец галереи*/
