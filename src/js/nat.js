@@ -246,4 +246,20 @@ function mov() {
     }
 }
 //Конец Смещаем фото вверх
+//Фото по номерам
+let a;
+a = document.getElementById('bu92');
+a.addEventListener('click', but92);
+function but92(e) {
+    e.preventDefault();
+    let h = e.target.href;
+    console.log(`h`, h);
+    if (h) {
+        document.getElementById('imfr').src = h;
+        for (let i = 0; i < a.children.length; i++) {
+            let b = a.children[i];
+            b.className = b == e.target ? 'curs' : '';
+        }
+    }
+}
 //Конец Галереи

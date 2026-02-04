@@ -14,6 +14,10 @@ h2,
 h3 {
     text-align: center;
 }
+
+.photo-number__gallery {
+    padding-top: 600px;
+}
 /* #basis {
     position: relative;
     margin: auto;
@@ -170,7 +174,9 @@ h3 {
 
 /*Галереи*/
 /*Смещаем фото вверх*/
-#basis {
+
+#basis,
+#basis92 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -212,3 +218,16 @@ h3 {
 }
 /*Конец фото вверх*/
 /*Конец галереи*/
+/*   Фото по номерам*/
+#basis92 {
+    text-align: center;
+}
+#bu92 a {
+    margin: 20px;
+    font-size: 30px;
+}
+.curs {
+    cursor: auto;
+    color: #cc0000;
+}
+/* Конец  Фото по номерам*/
