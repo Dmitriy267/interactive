@@ -14,6 +14,9 @@ h2,
 h3 {
     text-align: center;
 }
+img {
+    max-width: 100%;
+}
 
 .photo-number__gallery {
     padding-top: 600px;
@@ -176,7 +179,8 @@ h3 {
 /*Смещаем фото вверх*/
 
 #basis,
-#basis92 {
+#basis92,
+#basis94 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -217,7 +221,7 @@ h3 {
     cursor: pointer;
 }
 /*Конец фото вверх*/
-/*Конец галереи*/
+
 /*   Фото по номерам*/
 #basis92 {
     text-align: center;
@@ -231,3 +235,61 @@ h3 {
     color: #cc0000;
 }
 /* Конец  Фото по номерам*/
+/*Перемотка от центра*/
+.center__gallery {
+    padding-top: 200px;
+}
+#fon1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 350px;
+    height: 400px;
+    background: #ffffff;
+}
+#fon2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: 350px;
+    height: 400px;
+    background: #ffffff;
+}
+.im94 {
+    position: absolute;
+    top: 50px;
+    width: 300px;
+}
+#i941,
+#i942,
+#i943,
+#i944 {
+    left: 50px;
+}
+#i945 {
+    left: 350px;
+}
+#i946,
+#i947,
+#i948,
+#i949 {
+    left: 650px;
+}
+#nz,
+#vp {
+    position: absolute;
+    top: 280px;
+    cursor: pointer;
+    width: 30px;
+}
+#nz {
+    left: 430px;
+    transform: rotateY(180deg);
+}
+#vp {
+    left: 550px;
+}
+/*Конец Перемотка от центра*/
+/*Конец галереи*/

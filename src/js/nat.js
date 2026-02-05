@@ -253,7 +253,7 @@ a.addEventListener('click', but92);
 function but92(e) {
     e.preventDefault();
     let h = e.target.href;
-    console.log(`h`, h);
+
     if (h) {
         document.getElementById('imfr').src = h;
         for (let i = 0; i < a.children.length; i++) {
@@ -262,4 +262,39 @@ function but92(e) {
         }
     }
 }
+//Перемотка от центра
+let nz = document.getElementById('nz');
+// let vp = document.getElementById('vp');
+nz.addEventListener('click', prev);
+vp.addEventListener('click', next);
+let i94 = 5;
+function prev() {
+    vp.style.visibility = 'visible';
+    if (i94 < 9) {
+        document.getElementById('i94' + i94).style.transition = 'left 2s';
+        document.getElementById('i94' + i94).style.left = '50px';
+        let n = i94 + 1;
+        document.getElementById('i94' + n).style.transition = 'left 2s';
+        document.getElementById('i94' + n).style.left = '350px';
+        i94 = i94 + 1;
+        if (i94 == 9) {
+            document.getElementById('nz').style.visibility = 'hidden';
+        }
+    }
+}
+function next() {
+    nz.style.visibility = 'visible';
+    if (i94 > 1) {
+        document.getElementById('i94' + i94).style.transition = 'left 2s';
+        document.getElementById('i94' + i94).style.left = '650px';
+        let n = i94 - 1;
+        document.getElementById('i94' + n).style.transition = 'left 2s';
+        document.getElementById('i94' + n).style.left = '350px';
+        i94 = i94 - 1;
+        if (i94 == 1) {
+            document.getElementById('vp').style.visibility = 'hidden';
+        }
+    }
+}
+// Конец Перемотка от центра
 //Конец Галереи
