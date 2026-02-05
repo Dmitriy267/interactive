@@ -297,4 +297,22 @@ function next() {
     }
 }
 // Конец Перемотка от центра
+//Галерея-аккардион
+let i96 = 1;
+
+document.getElementById('bu96').addEventListener('click', function () {
+    if (i96 < 6) {
+        document.getElementById('i96' + i96).style.transition = 'width 2s';
+        document.getElementById('i96' + i96).style.width = 0;
+        document.getElementById('i96' + i96).style.left = 0;
+    }
+    let n = i96 + 1;
+    document.getElementById('i96' + n).style.transition = 'width 1.95s';
+    document.getElementById('i96' + n).style.width = '600px';
+    i96 = i96 + 1;
+    if (i96 == 6) {
+        document.getElementById('bu96').value = 'Просмотр завершен';
+    }
+});
+//Конец Галерея-аккардион
 //Конец Галереи
