@@ -181,7 +181,9 @@ img {
 #basis,
 #basis92,
 #basis94,
-#basis96 {
+#basis96,
+#basis97,
+#basis98 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -325,4 +327,45 @@ img {
     margin-top: 20px;
 }
 /*Конец Галерея-аккардион*/
+/*Галерея с ограничителями*/
+.bord__gallery {
+    padding-top: 100px;
+}
+#im97,
+#im98 {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    border: 1px solid #000000;
+    width: 400px;
+}
+#nz97,
+#vp97,
+#nz98,
+#vp98 {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+    width: 50px;
+}
+#nz97 {
+    left: 130px;
+    visibility: hidden;
+    transform: rotateY(180deg);
+}
+#vp97,
+#vp98 {
+    left: 620px;
+}
+
+/*Конец Галерея с ограничителями*/
+/*Замкнутая галерея*/
+.close__gallery {
+    padding-top: 340px;
+}
+#nz98 {
+    left: 130px;
+    transform: rotateY(180deg);
+}
+/*Конец Замкнутая галерея*/
 /*Конец галереи*/

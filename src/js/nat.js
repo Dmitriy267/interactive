@@ -315,4 +315,60 @@ document.getElementById('bu96').addEventListener('click', function () {
     }
 });
 //Конец Галерея-аккардион
+//Галерея с ограничителями
+
+let i97 = 1;
+document.getElementById('vp97').addEventListener('click', next97);
+function next97() {
+    if (i97 < 12) {
+        i97 = i97 + 1;
+        document.getElementById('nz97').style.visibility = 'visible';
+        document.getElementById('im97').src =
+            '/images/galleries/charter9.4/im' + i97 + '.jpg';
+    }
+    if (i97 == 12) {
+        document.getElementById('vp97').style.visibility = 'hidden';
+    }
+}
+document.getElementById('nz97').addEventListener('click', prev97);
+function prev97() {
+    if (i97 > 1) {
+        i97 = i97 - 1;
+        document.getElementById('vp97').style.visibility = 'visible';
+        document.getElementById('im97').src =
+            '/images/galleries/charter9.4/im' + i97 + '.jpg';
+    }
+    if (i97 == 1) {
+        document.getElementById('nz97').style.visibility = 'hidden';
+    }
+}
+//Конец Галерея с ограничителями
+//Замкнутая галерея
+let i98 = 1;
+document.getElementById('nz98').addEventListener('click', prev98);
+document.getElementById('vp98').addEventListener('click', next98);
+function prev98() {
+    if (i98 > 1) {
+        i98 = i98 - 1;
+        document.getElementById('im98').src =
+            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+    } else {
+        i98 = 12;
+        document.getElementById('im98').src =
+            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+    }
+}
+function next98() {
+    if (i98 < 12) {
+        i98 = i98 + 1;
+        document.getElementById('im98').src =
+            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+    } else {
+        i98 = 1;
+        document.getElementById('im98').src =
+            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+    }
+}
+
+//Конец Замкнутая галерея
 //Конец Галереи
