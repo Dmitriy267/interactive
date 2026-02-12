@@ -371,4 +371,79 @@ function next98() {
 }
 
 //Конец Замкнутая галерея
+//Оптимальная галерея
+addEventListener('scroll', del99);
+document.getElementById('pict99').addEventListener('click', del99);
+document.getElementById('nz99').addEventListener('click', prev99);
+document.getElementById('vp99').addEventListener('click', next99);
+let pict99 = document.getElementById('pict99');
+let bas99 = document.getElementById('bas99').style;
+let view99 = document.getElementById('view99').style;
+let n = document.querySelectorAll('.im99').length;
+
+let i99 = 1;
+document.getElementById('basis99').addEventListener('click', function (ev) {
+    if (ev.target.tagName == 'IMG') {
+        let sc = window.pageYOffset;
+        bas99.top = sc + 'px';
+        view99.top = sc + 'px';
+        pict99.src = ev.target.src;
+        view99.visibility = 'visible';
+        bas99.visibility = 'visible';
+
+        let rig = ev.target.src.split('it');
+
+        let lef = rig[1].split('.j');
+
+        i99 = lef[0];
+
+        document.getElementById('vp99').style.visibility = 'visible';
+        if (i99 == 1)
+            document.getElementById('nz99').style.visibility = 'hidden';
+        if (i99 == n)
+            document.getElementById('vp99').style.visibility = 'hidden';
+    }
+});
+function del99() {
+    view99.visibility = 'hidden';
+    bas99.visibility = 'hidden';
+    pict99.src = '/images/galleries/charter9.9/it1.jpg';
+    document.getElementById('nz99').style.visibility = 'hidden';
+    document.getElementById('vp99').style.visibility = 'hidden';
+}
+function prev99() {
+    document.getElementById('vp99').style.visibility = 'visible';
+    let posi = document.getElementById('pict99').src;
+    let rig = posi.split('it');
+
+    let lef = rig[1].split('.j');
+    i99 = lef[0];
+
+    if (i99 > 1) {
+        i99--;
+        document.getElementById('vp99').style.visibility = 'visible';
+        document.getElementById('pict99').src =
+            '/images/galleries/charter9.9/it' + i99 + '.jpg';
+        if (i99 == 1)
+            document.getElementById('nz99').style.visibility = 'hidden';
+    }
+}
+function next99() {
+    document.getElementById('nz99').style.visibility = 'visible';
+    let posi99 = document.getElementById('pict99').src;
+    let rig = posi99.split('it');
+    let lef = rig[1].split('.j');
+    i99 = lef[0];
+    if (i99 < n) {
+        i99++;
+
+        document.getElementById('nz99').style.visibility = 'visible';
+        document.getElementById('pict99').src =
+            '/images/galleries/charter9.9/it' + i99 + '.jpg';
+
+        if (i99 == n)
+            document.getElementById('vp99').style.visibility = 'hidden';
+    }
+}
+//Конец Оптимальная галерея
 //Конец Галереи

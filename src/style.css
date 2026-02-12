@@ -368,4 +368,56 @@ img {
     transform: rotateY(180deg);
 }
 /*Конец Замкнутая галерея*/
+/*Оптимальная галерея*/
+.optim__gallery {
+    padding-top: 350px;
+}
+#basis99 {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+}
+.im99 {
+    border: 1px solid #000000;
+    width: 300px;
+    cursor: pointer;
+    margin: 10px;
+}
+#bas99,
+#view99 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+#bas99 {
+    z-index: 1;
+    background: #ffffff;
+    opacity: 0.95;
+}
+#view99 {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pict99 {
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+#nz99,
+#vp99 {
+    cursor: pointer;
+}
+#nz99 {
+    margin-right: 20px;
+    transform: rotateY(180deg);
+}
+#vp99 {
+    margin-left: 20px;
+}
+/*Конец Оптимальная галерея*/
 /*Конец галереи*/
