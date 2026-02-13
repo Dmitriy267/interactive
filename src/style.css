@@ -183,7 +183,8 @@ img {
 #basis94,
 #basis96,
 #basis97,
-#basis98 {
+#basis98,
+#basis101 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -421,3 +422,40 @@ img {
 }
 /*Конец Оптимальная галерея*/
 /*Конец галереи*/
+
+/*  Автоматические слайдеры */
+
+/*Левый слайдер*/
+.auto__sliders {
+    padding-top: 160px;
+}
+
+#p1 {
+    z-index: 16;
+}
+#p2 {
+    z-index: 15;
+}
+#p3 {
+    z-index: 14;
+}
+#p4 {
+    z-index: 13;
+}
+#p5 {
+    z-index: 12;
+}
+#p6 {
+    z-index: 11;
+}
+.im101 {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    border: 1px solid #000000;
+    width: 600px;
+}
+
+/*Конец Левый слайдер*/
+
+/*Конец Автоматические слайдеры*/

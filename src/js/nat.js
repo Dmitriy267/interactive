@@ -446,4 +446,48 @@ function next99() {
     }
 }
 //Конец Оптимальная галерея
+
 //Конец Галереи
+
+// Автоматические слайдеры
+/*Левый слайдер*/
+
+let i101 = 1;
+let k101 = 200;
+let s101 = 1;
+let t101 = '';
+drive();
+function drive() {
+    let ph = 'p' + s101;
+    if (i101 == 1) {
+        i101 = 0;
+        window.setTimeout(drive, 2000);
+    } else {
+        if (s101 < 7) {
+            if (k101 >= -3000) {
+                document.getElementById(ph).style.left = k101 + 'px';
+                k101 = k101 - 10;
+                t101 = window.setTimeout(drive, 10);
+            } else {
+                k101 = 200;
+                s101 = s101 + 1;
+                t101 = window.setTimeout(drive, 10);
+            }
+        }
+        if (s101 == 6) {
+            document.getElementById('p1').style.zIndex = 10;
+            document.getElementById('p1').style.left = '200px';
+        }
+        if (s101 == 7) {
+            document.getElementById('p1').style.zIndex = 16;
+            for (let n = 2; n < 7; n++)
+                document.getElementById('p' + n).style.left = '200px';
+            s101 = 1;
+            window.clearTimeout(t101);
+
+            drive();
+        }
+    }
+}
+/*Конец Левый слайдер*/
+//Конец Автоматические слайдеры//
