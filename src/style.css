@@ -184,7 +184,8 @@ img {
 #basis96,
 #basis97,
 #basis98,
-#basis101 {
+#basis101,
+#basis102 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -457,5 +458,21 @@ img {
 }
 
 /*Конец Левый слайдер*/
+/*Слайдер с растворением*/
+.auto-opac__slider {
+    padding-top: 500px;
+}
+#i1021 {
+    opacity: 1;
+}
+.im102 {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    border: 1px solid #000000;
+    opacity: 0;
+    width: 600px;
+}
 
+/*Конец Слайдер с растворением*/
 /*Конец Автоматические слайдеры*/

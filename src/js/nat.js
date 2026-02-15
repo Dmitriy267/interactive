@@ -490,4 +490,34 @@ function drive() {
     }
 }
 /*Конец Левый слайдер*/
+/*Слайдер с растворением*/
+
+let s102 = 1;
+
+function diss() {
+    if (s102 < 6) {
+        let a = 'i102' + s102;
+        let t = document.getElementById(a).style;
+        t.transition = 'opacity 2s';
+        t.opacity = 0;
+        s102++;
+        a = 'i102' + s102;
+        t = document.getElementById(a).style;
+        t.transition = 'opacity 2s';
+        t.opacity = 1;
+        window.setTimeout(diss, 3000);
+    } else {
+        s102 = 1;
+        let t = document.getElementById('i1026').style;
+        t.transition = 'opacity 2s';
+        t.opacity = 0;
+        t = document.getElementById('i1021').style;
+        t.transition = 'opacity 2s';
+        t.opacity = 1;
+        window.setTimeout(diss, 3000);
+    }
+}
+
+diss();
+/*Конец Слайдер с растворением*/
 //Конец Автоматические слайдеры//
