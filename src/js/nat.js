@@ -520,4 +520,33 @@ function diss() {
 
 diss();
 /*Конец Слайдер с растворением*/
+/*Добавляем снимки*/
+let i111 = 7;
+document.getElementById('addit').addEventListener('click', () => {
+    if (i111 < 13) {
+        let a =
+            '<br/><img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        let b =
+            '<img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        let c =
+            '<img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        document
+            .getElementById('basis111')
+            .insertAdjacentHTML('beforeend', a + b + c);
+        if (i111 > 12) {
+            document.getElementById('addit').innerHTML = 'Просмотр завершен';
+        }
+    }
+});
+
+/*Конец Добавляем снимки*/
 //Конец Автоматические слайдеры//

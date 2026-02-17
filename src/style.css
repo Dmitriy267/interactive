@@ -475,4 +475,39 @@ img {
 }
 
 /*Конец Слайдер с растворением*/
+/*Добавляем снимки*/
+.addit__slider {
+    padding-top: 550px;
+    display: flex;
+    flex-direction: column;
+}
+#basis111 {
+    margin: auto;
+    margin-top: 20px;
+    width: 1000px;
+    text-align: center;
+}
+
+#basis111 img,
+.addit__img {
+    width: 300px;
+}
+.addit__img {
+    margin-left: 3px;
+}
+#addit {
+    margin: auto;
+    width: 350px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    background: #0000cc;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px #000000;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*Конец Добавляем снимки*/
 /*Конец Автоматические слайдеры*/
