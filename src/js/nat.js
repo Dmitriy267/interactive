@@ -631,3 +631,19 @@ function neco() {
 }
 
 /* Конец Перемещаем солнце*/
+
+/* Освещаем пейзаж*/
+
+document.getElementById('td2').addEventListener('dragover', mid);
+document.getElementById('td3').addEventListener('dragover', mid);
+document.getElementById('td3').addEventListener('drop', fin);
+
+function mid() {
+    event.preventDefault();
+}
+function fin() {
+    document.getElementById('td3').appendChild(document.getElementById('sun2'));
+    document.getElementById('td3').style.background =
+        'url(/images/sun/finish.jpg)';
+}
+/*Конец Перемещение изображений*/
