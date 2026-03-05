@@ -490,4 +490,144 @@ function drive() {
     }
 }
 /*Конец Левый слайдер*/
+/*Слайдер с растворением*/
+
+let s102 = 1;
+
+function diss() {
+    if (s102 < 6) {
+        let a = 'i102' + s102;
+        let t = document.getElementById(a).style;
+        t.transition = 'opacity 2s';
+        t.opacity = 0;
+        s102++;
+        a = 'i102' + s102;
+        t = document.getElementById(a).style;
+        t.transition = 'opacity 2s';
+        t.opacity = 1;
+        window.setTimeout(diss, 3000);
+    } else {
+        s102 = 1;
+        let t = document.getElementById('i1026').style;
+        t.transition = 'opacity 2s';
+        t.opacity = 0;
+        t = document.getElementById('i1021').style;
+        t.transition = 'opacity 2s';
+        t.opacity = 1;
+        window.setTimeout(diss, 3000);
+    }
+}
+
+diss();
+/*Конец Слайдер с растворением*/
+/*Добавляем снимки*/
+let i111 = 7;
+document.getElementById('addit').addEventListener('click', () => {
+    if (i111 < 13) {
+        let a =
+            '<br/><img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        let b =
+            '<img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        let c =
+            '<img src="/images/galleries/charter9.4/im' +
+            i111 +
+            '.jpg" alt="Фото" class="addit__img">';
+        i111++;
+        document
+            .getElementById('basis111')
+            .insertAdjacentHTML('beforeend', a + b + c);
+        if (i111 > 12) {
+            document.getElementById('addit').innerHTML = 'Просмотр завершен';
+        }
+    }
+});
+
+/*Конец Добавляем снимки*/
+
 //Конец Автоматические слайдеры//
+
+/*Направляем ракету*/
+
+document.getElementById('roc').addEventListener('click', coor);
+let h = 0;
+let v = 0;
+let i = 1;
+let c = 0;
+let d = 0;
+let t = 1;
+
+function coor() {
+    if (i == 1) {
+        h = event.pageX;
+        v = event.pageY;
+        i = 2;
+        c = h;
+        d = v;
+        document.getElementById('basis121').addEventListener('click', rocket);
+    }
+}
+function rocket() {
+    let nh = event.pageX;
+    let nv = event.pageY;
+    let ih = nh - h;
+    let iv = nv - v;
+
+    if ((t = 2)) {
+        if (c < nh) {
+            document.getElementById('roc').style.transform = 'rotate(45deg)';
+
+            if (d < nv) {
+                document.getElementById('roc').style.transform =
+                    'rotate(135deg)';
+            }
+        } else {
+            document.getElementById('roc').style.transform = 'rotate(-45deg)';
+            if (d < nv) {
+                document.getElementById('roc').style.transform =
+                    'rotate(-135deg)';
+            }
+        }
+    }
+    document.getElementById('roc').style.left = ih + 'px';
+    document.getElementById('roc').style.top = iv + 'px';
+    c = nh;
+    d = nv;
+    t = 2;
+}
+/*Конец Направляем ракету*/
+
+/*Перемещаем солнце*/
+
+document.getElementById('sun').addEventListener('mousedown', coor2);
+document.getElementById('sun').addEventListener('mouseup', function () {
+    removeEventListener('mousemove', neco);
+});
+let dv = 0;
+let dh = 0;
+
+function coor2() {
+    let v = event.pageY;
+    let h = event.pageX;
+    let sv = document.getElementById('sun').offsetTop;
+    let sh = document.getElementById('sun').offsetLeft;
+    dv = v - sv;
+    dh = h - sh;
+    addEventListener('mousemove', neco);
+}
+
+function neco() {
+    let nv = event.pageY;
+    let nh = event.pageX;
+    let fv = nv - dv;
+    let fh = nh - dh;
+    document.getElementById('sun').style.top = fv + 'px';
+    document.getElementById('sun').style.left = fh + 'px';
+}
+
+/* Конец Перемещаем солнце*/
