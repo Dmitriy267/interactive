@@ -549,4 +549,55 @@ document.getElementById('addit').addEventListener('click', () => {
 });
 
 /*Конец Добавляем снимки*/
+
 //Конец Автоматические слайдеры//
+
+/*Направляем ракету*/
+
+document.getElementById('roc').addEventListener('click', coor);
+let h = 0;
+let v = 0;
+let i = 1;
+let c = 0;
+let d = 0;
+let t = 1;
+
+function coor() {
+    if (i == 1) {
+        h = event.pageX;
+        v = event.pageY;
+        i = 2;
+        c = h;
+        d = v;
+        document.getElementById('basis121').addEventListener('click', rocket);
+    }
+}
+function rocket() {
+    let nh = event.pageX;
+    let nv = event.pageY;
+    let ih = nh - h;
+    let iv = nv - v;
+
+    if ((t = 2)) {
+        if (c < nh) {
+            document.getElementById('roc').style.transform = 'rotate(45deg)';
+
+            if (d < nv) {
+                document.getElementById('roc').style.transform =
+                    'rotate(135deg)';
+            }
+        } else {
+            document.getElementById('roc').style.transform = 'rotate(-45deg)';
+            if (d < nv) {
+                document.getElementById('roc').style.transform =
+                    'rotate(-135deg)';
+            }
+        }
+    }
+    document.getElementById('roc').style.left = ih + 'px';
+    document.getElementById('roc').style.top = iv + 'px';
+    c = nh;
+    d = nv;
+    t = 2;
+}
+/*Конец Направляем ракету*/

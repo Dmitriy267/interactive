@@ -185,7 +185,9 @@ img {
 #basis97,
 #basis98,
 #basis101,
-#basis102 {
+#basis102,
+#basis112,
+#basis121 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -510,4 +512,28 @@ img {
     cursor: pointer;
 }
 /*Конец Добавляем снимки*/
+
 /*Конец Автоматические слайдеры*/
+
+/*Перемещение изображений*/
+
+.h2__direct {
+    margin-top: 60px;
+}
+/*Направляем ракету*/
+#direct__images {
+    padding-top: 30px;
+}
+#basis121 {
+    height: 50vh;
+}
+#roc {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    width: calc(300px / 2);
+}
+/*Конец Направляем ракету*/
+
+/*Конец Перемещение изображений*/
