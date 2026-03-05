@@ -187,7 +187,8 @@ img {
 #basis101,
 #basis102,
 #basis112,
-#basis121 {
+#basis121,
+#basis122 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -535,5 +536,19 @@ img {
     width: calc(300px / 2);
 }
 /*Конец Направляем ракету*/
+/*Перемещаем солнце*/
+#direct__sun {
+    padding-top: 20px;
+}
 
+#sun {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 278px;
+    height: 278px;
+    background: url('/public/images/sun/sun.png');
+    cursor: pointer;
+}
+/* Конец Перемещаем солнце*/
 /*Конец Перемещение изображений*/

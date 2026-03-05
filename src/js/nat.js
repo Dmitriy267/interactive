@@ -601,3 +601,33 @@ function rocket() {
     t = 2;
 }
 /*Конец Направляем ракету*/
+
+/*Перемещаем солнце*/
+
+document.getElementById('sun').addEventListener('mousedown', coor2);
+document.getElementById('sun').addEventListener('mouseup', function () {
+    removeEventListener('mousemove', neco);
+});
+let dv = 0;
+let dh = 0;
+
+function coor2() {
+    let v = event.pageY;
+    let h = event.pageX;
+    let sv = document.getElementById('sun').offsetTop;
+    let sh = document.getElementById('sun').offsetLeft;
+    dv = v - sv;
+    dh = h - sh;
+    addEventListener('mousemove', neco);
+}
+
+function neco() {
+    let nv = event.pageY;
+    let nh = event.pageX;
+    let fv = nv - dv;
+    let fh = nh - dh;
+    document.getElementById('sun').style.top = fv + 'px';
+    document.getElementById('sun').style.left = fh + 'px';
+}
+
+/* Конец Перемещаем солнце*/
