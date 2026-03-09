@@ -189,7 +189,9 @@ img {
 #basis112,
 #basis121,
 #basis122,
-#basis123 {
+#basis123,
+#basis124,
+#basis131 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -587,4 +589,50 @@ img {
 }
 /*Конец Освещаем пейзаж*/
 
+/*Тормозим шарики*/
+.ball {
+    padding-top: 120px;
+    padding-bottom: 300px;
+}
+#ball {
+    position: absolute;
+    left: 0px;
+}
+#ran {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    width: 200px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+/*Конец Тормозим шарики*/
+
+/*Пасьянс из картинок*/
+.solit {
+    padding-top: 60px;
+}
+#basis131 {
+    text-align: center;
+}
+#basis131 p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.ims {
+    width: 300px;
+    border: 1px solid #000000;
+    margin: 10px;
+    opacity: 0;
+}
+#bfor,
+#bbac {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #000000;
+    box-shadow: #333333 5px 5px 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*Конец Пасьянс из картинок*/
 /*Конец Перемещение изображений*/

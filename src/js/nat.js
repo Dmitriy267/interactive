@@ -646,4 +646,64 @@ function fin() {
     document.getElementById('td3').style.background =
         'url(/images/sun/finish.jpg)';
 }
+
+/*Тормозим шарики*/
+let time = 10;
+let zBall = 0;
+balo();
+
+document.getElementById('ran').addEventListener('change', function () {
+    time = this.value;
+});
+
+function balo() {
+    zBall = zBall + 10;
+    if (zBall < 780) {
+        document.getElementById('ball').style.left = zBall + 'px';
+        window.setTimeout(balo, time);
+    } else {
+        window.setTimeout(revBall, time);
+    }
+}
+
+function revBall() {
+    zBall = zBall - 10;
+    if (zBall > 20) {
+        document.getElementById('ball').style.left = zBall + 'px';
+        window.setTimeout(revBall, time);
+    } else {
+        window.setTimeout(balo, time);
+    }
+}
+/*Конец Тормозим шарики*/
+
+/*Пасьянс из картинок*/
+
+let aSolit = 1;
+
+document.getElementById('bfor').addEventListener('click', forw);
+function forw() {
+    let d = document.getElementById('s' + aSolit).style;
+    d.transition = 'opacity 2s';
+    d.opacity = 1;
+    aSolit = aSolit + 1;
+    if (aSolit < 7) {
+        window.setTimeout(forw, 1000);
+    } else {
+        aSolit = 6;
+    }
+}
+document.getElementById('bbac').addEventListener('click', back);
+
+function back() {
+    document.getElementById('s' + aSolit).style.opacity = 0;
+
+    aSolit = aSolit - 1;
+    if (aSolit > 0) {
+        window.setTimeout(back, 1000);
+    } else {
+        aSolit = 1;
+    }
+}
+/*Конец Пасьянс из картинок*/
 /*Конец Перемещение изображений*/
