@@ -706,4 +706,40 @@ function back() {
     }
 }
 /*Конец Пасьянс из картинок*/
+
+/* Раскрашиваем рисунки*/
+
+const imagesAll = document.querySelectorAll('#basis132 img');
+const images = [...imagesAll];
+
+images.forEach((img) =>
+    img.addEventListener('mouseover', function (ev) {
+        let e = ev.target;
+        if (e.tagName === 'IMG') {
+            document.getElementById(e.id).style.filter = 'grayscale(0)';
+        }
+    }),
+);
+images.forEach((item) =>
+    item.addEventListener('mouseout', function (ev) {
+        let e = ev.target;
+        if (e.tagName === 'IMG') {
+            document.getElementById(e.id).style.filter = 'grayscale(100%)';
+        }
+    }),
+);
+
+/*Конец Раскрашиваем рисунки*/
+
+/* Настраиваем фото*/
+
+document.getElementById('ran1').addEventListener('mousemove', function () {
+    document.getElementById('man').style.opacity = this.value;
+});
+document.getElementById('ran2').addEventListener('mousemove', function () {
+    document.getElementById('man').style.filter =
+        'grayscale(' + this.value + '%)';
+});
+
+/* Настраиваем фото*/
 /*Конец Перемещение изображений*/
