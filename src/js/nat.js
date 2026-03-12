@@ -742,4 +742,35 @@ document.getElementById('ran2').addEventListener('mousemove', function () {
 });
 
 /* Настраиваем фото*/
+
+/*Проявляем картинку*/
+let dtwis = 0;
+let itwis = 0;
+
+document.getElementById('ocean').addEventListener('mousemove', opa);
+
+function opa() {
+    let h = event.pageX;
+    if (h - dtwis > 3) {
+        if (itwis <= 1) {
+            itwis = itwis + 0.01;
+            document.getElementById('ocean').style.opacity = itwis;
+            dtwis = h;
+        } else {
+            itwis = 1;
+        }
+    }
+    if (dtwis - h > 3) {
+        if (itwis >= 0) {
+            itwis = itwis - 0.01;
+            document.getElementById('ocean').style.opacity = itwis;
+            dtwis = h;
+        } else {
+            dtwis = 0;
+            itwis = 0;
+        }
+    }
+}
+
+/*Конец Проявляем картинку*/
 /*Конец Перемещение изображений*/
