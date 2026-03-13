@@ -2,24 +2,32 @@
 // addEventListener('load', function () {
 //     addEventListener('scroll', del);
 
-//     addEventListener('mouseover', function (e) {
-//         let ev = e.target;
-//         if (ev.tagName === 'IMG') {
-//             let b = ev.id;
-//             let t = this.document.getElementById(b).style;
-//             t.transition = 'opacity 1s';
-//             t.opacity = 1;
-//         }
-//     });
-//     addEventListener('mouseout', function (e) {
-//         let ev = e.target;
-//         if (ev.tagName === 'IMG') {
-//             let b = ev.id;
-//             let t = this.document.getElementById(b).style;
-//             t.transition = 'opacity 2s';
-//             t.opacity = 0.2;
-//         }
-//     });
+const imtranspAll = document.querySelectorAll('.imtransp');
+const imtransp = Array.from(imtranspAll);
+
+imtransp.forEach((item) => {
+    item.addEventListener('mouseover', function (e) {
+        let ev = e.target;
+        if (ev.tagName === 'IMG') {
+            let b = ev.id;
+            let t = document.getElementById(b).style;
+            t.transition = 'opacity 1s';
+            t.opacity = 1;
+        }
+    });
+});
+imtransp.forEach((item) => {
+    item.addEventListener('mouseout', function (e) {
+        let ev = e.target;
+        if (ev.tagName === 'IMG') {
+            let b = ev.id;
+            let t = document.getElementById(b).style;
+            t.transition = 'opacity 2s';
+            t.opacity = 0.2;
+        }
+    });
+});
+
 //     let view = document.getElementById('view');
 //     let bas = document.getElementById('bas');
 //     let pict = document.getElementById('pict');
@@ -43,38 +51,38 @@
 //     }
 // });
 // Конец кода Просмотр фотографий
-//Гасим лишнее
-// document.addEventListener('mouseover', function (e) {
-//     let ev = e.target;
-//     if (ev.tagName === 'IMG') {
-//         for (let i = 1; i < 10; i++) {
-//             let b = 'x' + i;
-//             if (ev.id != b) {
-//                 let t = document.getElementById(b).style;
-//                 t.transition = 'opacity 1s';
-//                 t.opacity = 0.1;
-//             }
-//         }
-//     } else {
-//         for (let i = 1; i < 10; i++) {
-//             let b = 'x' + i;
-//             let t = document.getElementById(b).style;
-//             t.transition = 'opacity 2s';
-//             t.opacity = 1;
-//         }
-//     }
-// });
-// Конец кода гасим лишнее
+/*Гасим лишнее*/
 
-//Выбор фото из списка
-// addEventListener('load', () => {
-//     document.getElementById('sel').addEventListener('change', () => {
-//         let a = document.getElementById('sel').value;
-//         document.getElementById('photo').src =
-//             '/images/nature/nat' + a + '.png';
-//     });
-// });
-// Конец Выбор фото из списка
+document.addEventListener('mouseover', function (e) {
+    let ev = e.target;
+    if (ev.tagName === 'IMG') {
+        for (let i = 1; i < 10; i++) {
+            let b = 'x' + i;
+            if (ev.id != b) {
+                let t = document.getElementById(b).style;
+                t.transition = 'opacity 1s';
+                t.opacity = 0.1;
+            }
+        }
+    } else {
+        for (let i = 1; i < 10; i++) {
+            let b = 'x' + i;
+            let t = document.getElementById(b).style;
+            t.transition = 'opacity 2s';
+            t.opacity = 1;
+        }
+    }
+});
+/* Конец кода гасим лишнее*/
+
+/*Выбор из списка*/
+
+document.getElementById('sel').addEventListener('change', () => {
+    let a = document.getElementById('sel').value;
+    document.getElementById('photo').src = '/images/nature/nat' + a + '.png';
+});
+
+/* Конец Выбор  из списка*/
 
 //Увеличение и растворение
 // let y = 1;

@@ -21,6 +21,49 @@ img {
 .photo-number__gallery {
     padding-top: 600px;
 }
+
+/*Увеличиваем непрозрачность*/
+.transp {
+    padding-top: 30px;
+}
+
+.imtransp {
+    width: 300px;
+    height: 220px;
+    border: 1px solid #000000;
+    opacity: 0.2;
+    margin: 10px;
+}
+/* Конец Увеличиваем непрозрачность*/
+
+/* Гасим лишнее*/
+
+.select {
+    padding-top: 30px;
+}
+.imx,
+.imxoption {
+    width: 300px;
+    height: 220px;
+    border: 1px solid #000000;
+    margin: 10px;
+}
+/* Конец Гасим лишнее*/
+/*  Выбор из списка*/
+.option {
+    padding-top: 30px;
+}
+#basis74 {
+    text-align: center;
+}
+#sel {
+    width: 200px;
+    font-size: 20px;
+    border: 1px solid blue;
+}
+
+/* Конец Выбор из списка*/
+
 /* #basis {
     position: relative;
     margin: auto;
@@ -179,6 +222,9 @@ img {
 /*Смещаем фото вверх*/
 
 #basis,
+#basis72,
+#basis73,
+#basis74,
 #basis92,
 #basis94,
 #basis96,
