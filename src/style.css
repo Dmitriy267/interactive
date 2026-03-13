@@ -193,7 +193,8 @@ img {
 #basis124,
 #basis131,
 #basis132,
-#basis133 {
+#basis133,
+#basis135 {
     position: relative;
     width: 1000px;
     margin: auto;
@@ -681,5 +682,31 @@ img {
     opacity: 0;
 }
 /*Конец Проявляем картинку*/
+
+/*Фото за шторкой*/
+.curt {
+    padding-top: 60px;
+}
+#basis135 {
+    height: 400px;
+}
+#ocean2 {
+    position: absolute;
+    top: 35px;
+    right: 250px;
+    width: 500px;
+    z-index: 10;
+}
+#lay {
+    position: absolute;
+    top: 20px;
+    right: 220px;
+    width: 550px;
+    height: 360px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    z-index: 20;
+}
+/*Конец Фото за шторкой*/
 
 /*Конец Перемещение изображений*/

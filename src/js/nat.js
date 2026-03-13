@@ -773,4 +773,19 @@ function opa() {
 }
 
 /*Конец Проявляем картинку*/
+
+/*Фото за шторкой*/
+
+document.getElementById('lay').addEventListener('mousemove', wid);
+let w = screen.width / 2 + 296;
+function wid() {
+    let h = event.pageX;
+    let p = w - h;
+
+    if (p < 553) {
+        document.getElementById('lay').style.width = p + 'px';
+    }
+}
+
+/*Конец Фото за шторкой*/
 /*Конец Перемещение изображений*/
