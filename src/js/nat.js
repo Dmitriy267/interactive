@@ -227,8 +227,8 @@ document.getElementById('basis99').addEventListener('click', function (ev) {
         let sc = window.pageYOffset;
         bas99.top = sc + 'px';
         view99.top = sc + 'px';
-        console.log(ev.target.src.slice(21));
-        pict99.src = '/interactive' + ev.target.src.slice(21);
+        console.log(ev.target.src.slice(28));
+        pict99.src = ev.target.src.slice(28);
         view99.visibility = 'visible';
         bas99.visibility = 'visible';
 
