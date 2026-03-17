@@ -202,11 +202,11 @@ function next98() {
     if (i98 < 12) {
         i98 = i98 + 1;
         document.getElementById('im98').src =
-            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i98 + '.jpg';
     } else {
         i98 = 1;
         document.getElementById('im98').src =
-            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i98 + '.jpg';
     }
 }
 
@@ -227,7 +227,8 @@ document.getElementById('basis99').addEventListener('click', function (ev) {
         let sc = window.pageYOffset;
         bas99.top = sc + 'px';
         view99.top = sc + 'px';
-        pict99.src = ev.target.src;
+        console.log(ev.target.src.slice(21));
+        pict99.src = '/interactive' + ev.target.src.slice(21);
         view99.visibility = 'visible';
         bas99.visibility = 'visible';
 
