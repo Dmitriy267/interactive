@@ -331,10 +331,12 @@ img {
 /*Конец галереи*/
 
 /*  Автоматические слайдеры */
-
+.sliders__h2 {
+    padding-top: 40px;
+}
 /*Левый слайдер*/
 .auto__sliders {
-    padding-top: 160px;
+    padding-top: 50px;
 }
 
 #p1 {
