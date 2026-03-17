@@ -103,7 +103,7 @@ function but92(e) {
 }
 //Перемотка от центра
 let nz = document.getElementById('nz');
-// let vp = document.getElementById('vp');
+let vp = document.getElementById('vp');
 nz.addEventListener('click', prev);
 vp.addEventListener('click', next);
 let i94 = 5;
