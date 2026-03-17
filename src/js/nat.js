@@ -91,7 +91,7 @@ a = document.getElementById('bu92');
 a.addEventListener('click', but92);
 function but92(e) {
     e.preventDefault();
-    let h = e.target.href;
+    let h = e.target.href.slice(28);
 
     if (h) {
         document.getElementById('imfr').src = h;
@@ -254,7 +254,7 @@ function del99() {
 }
 function prev99() {
     document.getElementById('vp99').style.visibility = 'visible';
-    let posi = document.getElementById('pict99').src;
+    let posi = document.getElementById('pict99').src.slice(28);
     let rig = posi.split('it');
 
     let lef = rig[1].split('.j');
@@ -273,7 +273,6 @@ function next99() {
     document.getElementById('nz99').style.visibility = 'visible';
     let posi99 = document.getElementById('pict99').src.slice(28);
 
-    console.log(posi99);
     let rig = posi99.split('it');
     let lef = rig[1].split('.j');
     i99 = lef[0];
