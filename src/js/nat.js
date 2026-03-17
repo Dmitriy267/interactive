@@ -227,7 +227,7 @@ document.getElementById('basis99').addEventListener('click', function (ev) {
         let sc = window.pageYOffset;
         bas99.top = sc + 'px';
         view99.top = sc + 'px';
-        console.log(ev.target.src.slice(28));
+        console.log(`ссылка`, ev.target.src.slice(28));
         pict99.src = ev.target.src.slice(28);
         view99.visibility = 'visible';
         bas99.visibility = 'visible';
@@ -271,7 +271,9 @@ function prev99() {
 }
 function next99() {
     document.getElementById('nz99').style.visibility = 'visible';
-    let posi99 = document.getElementById('pict99').src;
+    let posi99 = document.getElementById('pict99').src.slice(28);
+
+    console.log(posi99);
     let rig = posi99.split('it');
     let lef = rig[1].split('.j');
     i99 = lef[0];
