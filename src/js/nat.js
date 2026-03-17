@@ -38,7 +38,7 @@ imtransp.forEach((item) => {
 document.getElementById('sel').addEventListener('change', () => {
     let a = document.getElementById('sel').value;
     document.getElementById('photo').src =
-        '/interactive/images/nature/nat' + a + '.png';
+        './public/images/nature/nat' + a + '.png';
 });
 
 /* Конец Выбор  из списка*/
