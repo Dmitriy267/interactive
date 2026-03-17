@@ -38,7 +38,7 @@ imtransp.forEach((item) => {
 document.getElementById('sel').addEventListener('change', () => {
     let a = document.getElementById('sel').value;
     document.getElementById('photo').src =
-        './public/images/nature/nat' + a + '.png';
+        '/interactive/images/nature/nat' + a + '.png';
 });
 
 /* Конец Выбор  из списка*/
@@ -164,7 +164,7 @@ function next97() {
         i97 = i97 + 1;
         document.getElementById('nz97').style.visibility = 'visible';
         document.getElementById('im97').src =
-            '/images/galleries/charter9.4/im' + i97 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i97 + '.jpg';
     }
     if (i97 == 12) {
         document.getElementById('vp97').style.visibility = 'hidden';
@@ -176,7 +176,7 @@ function prev97() {
         i97 = i97 - 1;
         document.getElementById('vp97').style.visibility = 'visible';
         document.getElementById('im97').src =
-            '/images/galleries/charter9.4/im' + i97 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i97 + '.jpg';
     }
     if (i97 == 1) {
         document.getElementById('nz97').style.visibility = 'hidden';
@@ -191,11 +191,11 @@ function prev98() {
     if (i98 > 1) {
         i98 = i98 - 1;
         document.getElementById('im98').src =
-            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i98 + '.jpg';
     } else {
         i98 = 12;
         document.getElementById('im98').src =
-            '/images/galleries/charter9.4/im' + i98 + '.jpg';
+            '/interactive/images/galleries/charter9.4/im' + i98 + '.jpg';
     }
 }
 function next98() {
@@ -247,7 +247,7 @@ document.getElementById('basis99').addEventListener('click', function (ev) {
 function del99() {
     view99.visibility = 'hidden';
     bas99.visibility = 'hidden';
-    pict99.src = '/images/galleries/charter9.9/it1.jpg';
+    pict99.src = '/interactive/images/galleries/charter9.9/it1.jpg';
     document.getElementById('nz99').style.visibility = 'hidden';
     document.getElementById('vp99').style.visibility = 'hidden';
 }
@@ -263,7 +263,7 @@ function prev99() {
         i99--;
         document.getElementById('vp99').style.visibility = 'visible';
         document.getElementById('pict99').src =
-            '/images/galleries/charter9.9/it' + i99 + '.jpg';
+            '/interactive/images/galleries/charter9.9/it' + i99 + '.jpg';
         if (i99 == 1)
             document.getElementById('nz99').style.visibility = 'hidden';
     }
@@ -279,7 +279,7 @@ function next99() {
 
         document.getElementById('nz99').style.visibility = 'visible';
         document.getElementById('pict99').src =
-            '/images/galleries/charter9.9/it' + i99 + '.jpg';
+            '/interactive/images/galleries/charter9.9/it' + i99 + '.jpg';
 
         if (i99 == n)
             document.getElementById('vp99').style.visibility = 'hidden';
@@ -484,7 +484,7 @@ function mid() {
 function fin() {
     document.getElementById('td3').appendChild(document.getElementById('sun2'));
     document.getElementById('td3').style.background =
-        'url(/images/sun/finish.jpg)';
+        'url(/interactive/images/sun/finish.jpg)';
 }
 
 /*Тормозим шарики*/
